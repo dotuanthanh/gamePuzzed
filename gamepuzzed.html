@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    img {
+        width: 90%;
+        height: 90%;
+    }
+</style>
+<div id="div1" style="width: 600px;height: 100px"><img id="1" onclick="click1()" src="cat1.jpg"></div>
+<div id="div2" style="width: 600px;height: 100px"><img id="2" onclick="click2()" src="gau2.jpg"></div>
+<div id="div3" style="width: 600px;height: 100px"><img id="3" onclick="click3()" src="cat3.jpg"></div>
+<div id="div4" style="width: 600px;height: 100px"><img id="4" onclick="click4()" src="khi4.jpg"></div>
+<div id="div5" style="width: 600px;height: 100px"><img id="5" onclick="click5()" src="cat5.jpg"></div>
+<h3 id ='In' ></h3>
+</body>
+</html>
+<script>
+
+    function click1() {
+        let x1 = document.getElementById("1").getAttribute("src")
+        if (x1 == 'cat1.jpg') {
+            document.getElementById('1').src = "khi1.jpg"
+        } else if (x1 == 'khi1.jpg') {
+            document.getElementById('1').src = "gau1.jpg"
+        } else {
+            document.getElementById('1').src = 'cat1.jpg'
+        }
+        check();
+    }
+
+    function click2() {
+        let x2 = document.getElementById('2').getAttribute("src")
+        if (x2 == 'gau2.jpg') {
+            document.getElementById('2').src = "khi2.jpg"
+        } else if (x2 == 'khi2.jpg') {
+            document.getElementById('2').src = "cat2.jpg"
+        } else {
+            document.getElementById('2').src = 'gau2.jpg'
+        }
+        check()
+    }
+
+    function click3() {
+        let x3 = document.getElementById("3").getAttribute("src")
+        if (x3 == 'cat3.jpg') {
+            document.getElementById('3').src = "gau3.jpg"
+        } else if (x3 == 'gau3.jpg') {
+            document.getElementById('3').src = "khi3.jpg"
+        } else {
+            document.getElementById('3').src = 'cat3.jpg'
+        }
+        check()
+    }
+
+    function click4() {
+        let x4 = document.getElementById("4").getAttribute("src")
+        if (x4 == 'khi4.jpg') {
+            document.getElementById('4').src = "cat4.jpg"
+        } else if (x4 == 'cat4.jpg') {
+            document.getElementById('4').src = "gau4.jpg"
+        } else {
+            document.getElementById('4').src = 'khi4.jpg'
+        }
+        check()
+    }
+
+    function click5() {
+        let x5 = document.getElementById("5").getAttribute("src")
+        if (x5 == 'cat5.jpg') {
+            document.getElementById('5').src = "khi5.jpg"
+        } else if (x5 == 'khi5.jpg') {
+            document.getElementById('5').src = "gau5.jpg"
+        } else {
+            document.getElementById('5').src = 'cat5.jpg'
+        }
+        check()
+    }
+
+    function check() {
+        let img1 = document.getElementById("1").getAttribute("src");
+        let img2 = document.getElementById("2").getAttribute("src");
+        let img3 = document.getElementById("3").getAttribute("src");
+        let img4 = document.getElementById("4").getAttribute("src");
+        let img5 = document.getElementById("5").getAttribute("src");
+        if((img1 == 'cat1.jpg' && img2 == 'cat2.jpg' && img3 =="cat3.jpg"&&img4=='cat4.jpg'&&img5=="cat5.jpg" )
+        || (img1 == 'khi1.jpg' && img2 == 'khi2.jpg' && img3 =='khi3.jpg'&&img4=='khi4,jpg'&&img5=='khi5.jpg')
+        ||( img1 =='gau1.jpg' &&  img2=='gau2.jpg ' &&  img3=='gau3.jpg'&&img4=='gau4.jpg'&& img5=='gau5.jpg')) {
+            document.getElementById('In').innerHTML=" Yeahhh It 's True "
+        }
+
+
+    else{
+        document.getElementById('In').innerHTML = '';
+    }}
+
+
+</script>
